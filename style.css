@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Floating Hearts Animation */
+.heart-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.ibb.co/BfPk7pK/heart.png') repeat;
+  background-size: 60px 60px;
+  opacity: 0.1;
+  animation: float 15s linear infinite;
+}
+
+@keyframes float {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 1000px; }
+}
+
+.container {
+  text-align: center;
+  z-index: 10;
+  width: 100%;
+}
+
+.title {
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 30px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+/* --- Envelope & Paper Redesign --- */
+
+.letter {
+  position: relative;
+  background: #ff7575;
+  width: 80vw;
+  height: 50vw;
+  max-width: 800px;
+  max-height: 500px;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  cursor: pointer; /* Indicates the envelope is clickable */
+}
+
+/* The new flap element */
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff8a8a;
+  border-radius: 10px;
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+  transform-origin: top;
+  transition: transform 0.6s ease-in-out;
+  z-index: 3;
+}
+
+/* Open state for the flap */
+.flap.open {
+  transform: rotateX(180deg);
+}
+
+.paper {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: #fcfcfc;
+  background-image: url('https://www.transparenttextures.com/patterns/lined-paper.png');
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1) inset;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  transition: all 0.7s ease-out;
+  z-index: 1;
+}
+
+.paper.out {
+  transform: translateY(-550px) rotate(-8deg);
+  opacity: 0;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.message {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+  color: #5b2c3d;
+  white-space: pre-line;
+  line-height: 1.4em;
+  text-align: left;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 15px;
+  /* Initially invisible, fades in after flap opens */
+  opacity: 0;
+  transition: opacity 0.5s 0.3s ease-in-out;
+}
+
+/* Message becomes visible when its sibling flap has the 'open' class */
+.flap.open + .paper .message {
+  opacity: 1;
+}
+
+.message::-webkit-scrollbar { width: 8px; }
+.message::-webkit-scrollbar-track { background: transparent; }
+.message::-webkit-scrollbar-thumb { background-color: rgba(91, 44, 61, 0.3); border-radius: 20px; }
+
+/* --- Redesigned Button --- */
+.next-btn {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fff;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* Initially hidden and non-interactive */
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+/* Button becomes visible when the container has the 'envelope-opened' class */
+.container.envelope-opened .next-btn {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.next-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.next-btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
