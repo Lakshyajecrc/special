@@ -1,13 +1,13 @@
 const messages = [
-  "              Two Years With You 💞\nHey beautiful aaj sab kuch to nhi\npar kuch pal yad karte hai\nthe time we speant together.",
-  "It all started in this beautiful night\none proposal that made me yours,\none proposal that made you mine.",
-  "Batch party the best night-\nthe little hand hold under the jacket—\na bold hug jisne mujhe shock chod diya.\n jisne mujhe tujhe i love bolne ke liye push kiya",
-  "Shirt signing —\nthe day i was only there for you \nand the hug that made all those efforts worth it\n the hug from which we both never wanted to come out.",
-  "Farewell a day we can never forget—\ntight hand holds during the farewell \na day of commitment for us\n the day we both had our first kiss.",
-  "The final board exam,\nahh kaise bhuloge vo besharmo wala kiss\npar usse bhi zyada yad hai mujhe tera jane se phele puchna ki vapis milenge na .",
-  "The movie day,\nthe jealous vanshika i saw that day \nbut i saw that sweet little scroll you gave me.",
+  "              ONE MONTH With You 💞\nHey beautiful aaj sab kuch to nhi\npar kuch pal yad karte hai\nthe time we speant together.",
+  "It all started in this beautiful day i texted you \nahh the night that made me yours,\nthe time that made you mine.",
+  "ahh how can i forgot how we fight and reassure-\nthe little hand hold —\na bold move jisne mujhe shock chod diya.\n jisne mujhe tujhe i love bolne ke liye push kiya",
+  "the you came back from lucknow  —\nthe day i was only there for you \nand the hug that made all those efforts worth it\n the hug from which we both never wanted to come out.",
+  "first date that we can never forget —\nwe both dont know how we went from that to tight hugs \na day just  for us\n the day we both had our first kiss.",
+  "The final meeting we had today ,\nahh kaise bhuloge vo  hug mera \npar usse bhi zyada yad hai mujhe tera jane se phele vo hug karna even after everything .",
+  "The arcade day ,\nthe jealous satviki i see by my reel likes  \nbut i saw that sweet little smile i got there .",
   "ahh ab aise hazaaro moments yad nhi kar sakte,\nbut the time we had was the purest—\nahh aur understanding and support kabhi usse zyada na kar paya na mila.",
-  "we can never forget the nights we used to have ,\nsome intimate memories too \nbut the best part it was all out of love no lust.",
+  "we can never forget the happy time we have spent till now ,\nsome intimate memories too \nbut the best part it was all out of love no lust.",
   "And when all the stars forget to shine,\nI’ll still find my light—\nin the warmth of your eyes."
 ];
 
